@@ -29,7 +29,7 @@ section '.text' code readable executable
 
 start:
     mov     esi,keep_nums
-    add     esi,10000h
+    add     esi,10000h  ; Add 0x10000 to memory address stored in ESI
     mov     dword [esi],3 ; Write some dword.
 
 

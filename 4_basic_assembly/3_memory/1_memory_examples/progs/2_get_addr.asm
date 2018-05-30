@@ -20,12 +20,13 @@ AMOUNT_NUMS = 6
 ; This is the data section:
 ; ===============================================
 section '.data' data readable writeable
-  keep_nums  dd AMOUNT_NUMS dup (0)
-    
+  keep_nums  dd AMOUNT_NUMS dup (0) 
+  ; keep_nums represents the location in memory where the dword array is stored
+  
 ; ===============================================
 section '.text' code readable executable
 
-start:
+start: ; The start label is a memory location where the first instruction below starts.
     mov     eax,keep_nums
     call    print_eax
 
